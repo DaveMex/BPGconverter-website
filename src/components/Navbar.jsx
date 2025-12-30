@@ -23,7 +23,7 @@ const Navbar = () => {
                         href="https://buymeacoffee.com/davemx"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-600 hover:text-yellow-500 transition-colors"
+                        className="p-2 text-slate-900 bg-[#FFDD00] hover:bg-[#FFDD00]/90 rounded-full transition-all hover:scale-110 shadow-sm"
                         title="Buy me a coffee"
                     >
                         <Coffee size={20} />
