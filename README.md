@@ -6,11 +6,12 @@ The official landing page for the **BPG Converter** desktop application. This we
 
 ## 🚀 Features
 
--   **Smart Downloads**: Automatically detects the user's operating system (Windows, Linux, macOS) and provides the correct download link.
+-   **Smart Downloads & Multi-Format**: Automatically detects the user's operating system (Windows, Linux, macOS) and provides the correct download link, supporting Windows NSIS `.exe`, macOS Universal `.dmg` (Apple Silicon & Intel), and Linux `.deb`, `.rpm`, and `.AppImage`.
+-   **v1.1.0 Highlights**: Showcases the new bidirectional conversion engine (PNG/JPG/WebP ⇄ BPG), custom destination folder support, and expanded platform packages.
+-   **Installation & Security Guides**: Integrated help section for Windows SmartScreen, macOS Gatekeeper ad-hoc bypass, and Linux package manager commands.
 -   **Live Updates**: Fetches the latest release version and assets directly from the [GitHub Releases API](https://docs.github.com/en/rest/releases/releases).
--   **Developer Guide**: dedicated documentation on how to embed and use BPG images on the web using `bpgdec.js`.
+-   **Developer Guide**: Dedicated documentation on how to embed and use BPG images on the web using `bpgdec.js`.
 -   **Modern UI**: Built with a clean, responsive design using **Tailwind CSS v4** and **React**.
--   **Dark Mode Ready**: Designed with a sleek aesthetic that complements the dark-themed desktop app.
 
 ## 🛠️ Tech Stack
 

@@ -26,11 +26,11 @@ const AboutSection = () => {
             <div className="container mx-auto px-4">
 
                 {/* Mission */}
-                <div className="max-w-3xl mx-auto text-center mb-20">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-500 mb-6">
+                <div className="max-w-3xl mx-auto text-center mb-16">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-500 mb-6 shadow-sm">
                         <Heart size={32} fill="currentColor" />
                     </div>
-                    <h2 className="text-4xl font-bold text-slate-900 mb-6">The Mission</h2>
+                    <h2 className="text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">The Mission</h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
                         The BPG (Better Portable Graphics) format offers a significant advantage over traditional image formats
                         like JPG and PNG. It delivers higher quality at smaller file sizes, thanks to the HEVC video compression standard.
@@ -38,6 +38,65 @@ const AboutSection = () => {
                         Our goal is to make this powerful technology accessible to everyone through a simple, modern desktop application.
                         Whether you're a developer, photographer, or just want to save disk space, BPG Converter is built for you.
                     </p>
+                </div>
+
+                {/* What's New in v1.1.0 */}
+                <div className="max-w-4xl mx-auto mb-20">
+                    <Card className="p-8 border-primary/20 bg-gradient-to-br from-white via-slate-50/50 to-purple-50/30 shadow-lg shadow-purple-500/5">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
+                            <div>
+                                <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                                    Release Highlights
+                                </span>
+                                <h3 className="text-2xl font-bold text-slate-900 mt-2">What's New in Version 1.1.0</h3>
+                            </div>
+                            <span className="text-sm font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs self-start sm:self-auto">
+                                Released September 2026
+                            </span>
+                        </div>
+
+                        <div className="grid sm:grid-cols-2 gap-6 text-sm text-slate-700">
+                            <div className="space-y-2">
+                                <div className="font-semibold text-slate-900 flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                                    Bidirectional Conversion (BPG ➔ PNG / JPEG)
+                                </div>
+                                <p className="text-xs text-slate-600 pl-4 leading-relaxed">
+                                    Not just an encoder: now drag and drop any <code>.bpg</code> image into the app to instantly decode and export it as a Lossless PNG or high-quality JPEG.
+                                </p>
+                            </div>
+
+                            <div className="space-y-2">
+                                <div className="font-semibold text-slate-900 flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                                    Custom Output Destination Folder
+                                </div>
+                                <p className="text-xs text-slate-600 pl-4 leading-relaxed">
+                                    Choose custom folders to store your batch conversions, or keep saving alongside source files with a single-click reset.
+                                </p>
+                            </div>
+
+                            <div className="space-y-2">
+                                <div className="font-semibold text-slate-900 flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                                    macOS Universal DMG
+                                </div>
+                                <p className="text-xs text-slate-600 pl-4 leading-relaxed">
+                                    Single unified installer package running natively on both Apple Silicon (M1/M2/M3/M4) and Intel x86_64 machines.
+                                </p>
+                            </div>
+
+                            <div className="space-y-2">
+                                <div className="font-semibold text-slate-900 flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-primary"></span>
+                                    Linux .deb, .rpm & AppImage Packages
+                                </div>
+                                <p className="text-xs text-slate-600 pl-4 leading-relaxed">
+                                    First-class native packages for Ubuntu, Debian, Linux Mint, Fedora, openSUSE, and portable AppImage.
+                                </p>
+                            </div>
+                        </div>
+                    </Card>
                 </div>
 
                 {/* Credits */}
