@@ -40,7 +40,7 @@ const AboutSection = () => {
                     </p>
                 </div>
 
-                {/* What's New in v1.1.0 */}
+                {/* What's New in v1.1 */}
                 <div className="max-w-4xl mx-auto mb-20">
                     <Card className="p-8 border-primary/20 bg-gradient-to-br from-white via-slate-50/50 to-purple-50/30 shadow-lg shadow-purple-500/5">
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-200">
@@ -48,10 +48,10 @@ const AboutSection = () => {
                                 <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">
                                     Release Highlights
                                 </span>
-                                <h3 className="text-2xl font-bold text-slate-900 mt-2">What's New in Version 1.1.0</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mt-2">What's New in Version 1.1</h3>
                             </div>
                             <span className="text-sm font-semibold text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-xs self-start sm:self-auto">
-                                Released September 2026
+                                Latest Release: v1.1.1
                             </span>
                         </div>
 

@@ -11,9 +11,9 @@ import {
 } from 'lucide-react';
 import Button from './ui/Button';
 import Card from './ui/Card';
-import logo from '../assets/logo-circular.svg';
 import fallbackScreenshot from '../assets/screenshot-BPG-converter.png';
 import BPGViewer from './BPGViewer';
+import { useGitHubReleases } from '../hooks/useGitHubReleases';
 
 const FeatureItem = ({ icon: Icon, title, description, badge }) => (
     <div className="flex flex-col items-center text-center p-4 relative">
@@ -31,19 +31,21 @@ const FeatureItem = ({ icon: Icon, title, description, badge }) => (
 );
 
 const Hero = () => {
+    const { version } = useGitHubReleases();
+
     return (
         <section className="pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
             <div className="container mx-auto px-4">
 
                 {/* Main Content */}
                 <div className="max-w-4xl mx-auto text-center mb-16 relative z-10">
-                    {/* v1.1.0 Announcement Badge */}
+                    {/* Announcement Badge */}
                     <a
                         href="#download"
                         className="inline-flex items-center justify-center py-1.5 px-4 mb-8 bg-white/90 backdrop-blur-sm rounded-full shadow-sm border border-primary/25 hover:border-primary/50 transition-all hover:scale-[1.02] group cursor-pointer select-none"
                     >
                         <span className="flex h-2 w-2 rounded-full bg-emerald-500 mr-2.5 animate-pulse"></span>
-                        <span className="text-xs font-bold uppercase tracking-wider text-primary mr-2">New in v1.1.0</span>
+                        <span className="text-xs font-bold uppercase tracking-wider text-primary mr-2">New in v{version}</span>
                         <span className="text-xs text-slate-600 group-hover:text-slate-900 transition-colors">
                             Bidirectional ⇄, macOS Universal & Linux .deb/.rpm
                         </span>
@@ -63,7 +65,7 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Button href="#download" className="w-full sm:w-auto text-lg px-8 py-4 shadow-lg shadow-primary/25">
                             <Download className="w-5 h-5 mr-2" />
-                            Download v1.1.0
+                            Download v{version}
                         </Button>
                         <Button href="#features" variant="secondary" className="w-full sm:w-auto text-lg px-8 py-4">
                             Explore Features
@@ -77,7 +79,7 @@ const Hero = () => {
                     <BPGViewer
                         bpgSrc="/Screenshot-BPG.bpg"
                         fallbackSrc={fallbackScreenshot}
-                        alt="BPG Converter v1.1.0 Desktop App Interface"
+                        alt={`BPG Converter v${version} Desktop App Interface`}
                     />
                 </div>
 
@@ -94,7 +96,7 @@ const Hero = () => {
                         <Card hoverEffect>
                             <FeatureItem
                                 icon={ArrowRightLeft}
-                                badge="New in v1.1.0"
+                                badge="New in v1.1"
                                 title="Bidirectional Conversion"
                                 description="Encode images to BPG, or drag & drop BPG files to instantly export them back as Lossless PNG or high-quality JPEG."
                             />
@@ -102,7 +104,7 @@ const Hero = () => {
                         <Card hoverEffect>
                             <FeatureItem
                                 icon={FolderCheck}
-                                badge="New in v1.1.0"
+                                badge="New in v1.1"
                                 title="Custom Destination Folder"
                                 description="Choose where your converted images land with a single click, or keep them beside the source file with quick reset."
                             />
@@ -110,7 +112,7 @@ const Hero = () => {
                         <Card hoverEffect>
                             <FeatureItem
                                 icon={Cpu}
-                                badge="New in v1.1.0"
+                                badge="New in v1.1"
                                 title="macOS Universal & Linux .deb"
                                 description="Native Apple Silicon (M1/M2/M3/M4) + Intel DMG. Complete Linux distribution support with .deb, .rpm, and AppImage."
                             />

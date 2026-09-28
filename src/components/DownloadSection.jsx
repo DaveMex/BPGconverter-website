@@ -404,7 +404,7 @@ const DownloadSection = () => {
                                             <span className="font-semibold text-slate-800 text-xs block mb-1">Debian / Ubuntu / Linux Mint (.deb)</span>
                                             <CopyCommand text={`sudo dpkg -i bpg-converter-app_${version}_amd64.deb`} />
                                             <p className="text-[11px] text-slate-500 mt-1">
-                                                Note for Ubuntu 24.04+: If the app doesn't launch after installation due to AppArmor namespace restrictions, run: <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-700">sudo chmod 4755 "/opt/BPG Converter/chrome-sandbox"</code>
+                                                Note for Ubuntu 24.04+: Release v1.1.1+ includes preconfigured launcher compatibility. If you ever need to run via terminal without sandbox: <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-700">bpg-converter-app --no-sandbox</code>
                                             </p>
                                         </div>
                                         <div>
@@ -413,7 +413,7 @@ const DownloadSection = () => {
                                         </div>
                                         <div>
                                             <span className="font-semibold text-slate-800 text-xs block mb-1">Universal AppImage</span>
-                                            <CopyCommand text={`chmod +x "BPG Converter-${version}.AppImage" && ./"BPG Converter-${version}.AppImage"`} />
+                                            <CopyCommand text={`chmod +x "BPG-Converter-${version}.AppImage" && ./"BPG-Converter-${version}.AppImage"`} />
                                             <p className="text-[11px] text-slate-500 mt-1">
                                                 Note for Ubuntu 22.04+ or newer distros: If AppImage does not start, run <code>sudo apt install libfuse2</code>.
                                             </p>
