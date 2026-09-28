@@ -403,6 +403,9 @@ const DownloadSection = () => {
                                         <div>
                                             <span className="font-semibold text-slate-800 text-xs block mb-1">Debian / Ubuntu / Linux Mint (.deb)</span>
                                             <CopyCommand text={`sudo dpkg -i bpg-converter-app_${version}_amd64.deb`} />
+                                            <p className="text-[11px] text-slate-500 mt-1">
+                                                Note for Ubuntu 24.04+: If the app doesn't launch after installation due to AppArmor namespace restrictions, run: <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-700">sudo chmod 4755 "/opt/BPG Converter/chrome-sandbox"</code>
+                                            </p>
                                         </div>
                                         <div>
                                             <span className="font-semibold text-slate-800 text-xs block mb-1">Fedora / Red Hat / openSUSE (.rpm)</span>
